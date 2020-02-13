@@ -14,8 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var treeImageWidthContraint: NSLayoutConstraint!
     @IBOutlet weak var button: UIButton!
     
+    @IBOutlet var threeThumbs: [UIImageView]!
     var currentTree = 1
     var timer: Timer?
+    var timePassed = 0
+    let roundsNeeded = 1
+    var grownTrees = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,25 +31,61 @@ class ViewController: UIViewController {
     {
         switch button.titleLabel?.text {
         case "Start":
+            resetApp()
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerHandle), userInfo: nil, repeats: true)
             button.setTitle("Stop", for: .normal)
         case "Stop":
-            timer?.invalidate()
-            button.setTitle("Start", for: .normal)
+            stopTrees()
         default:
             break
         }
         
     }
     
-    @objc func timerHandle() {
+    func updateTrees() {
         currentTree += 1
         if let image = UIImage(named: "Tree\(currentTree)") {
             treeImageView.image = image
-            treeImageWidthContraint.constant += treeImageWidthContraint.constant * 0.5
+            treeImageWidthContraint.constant += treeImageWidthContraint.constant * 0.4
         } else {
-            timer?.invalidate()
-            button.setTitle("Start", for: .normal)
+            if grownTrees == threeThumbs.count - 1 {
+                stopTrees()
+            } else {
+                currentTree = 0
+                treeImageWidthContraint.constant = 100
+                updateTrees()
+            }
+            threeThumbs[grownTrees].alpha = 1
+            grownTrees += 1
+        }
+    }
+    
+    func resetApp() {
+        timer?.invalidate()
+        currentTree = 1
+        timePassed = 0
+        grownTrees = 0
+        
+        if let image = UIImage(named: "Tree1") {
+            treeImageView.image = image
+            treeImageWidthContraint.constant = 100
+        }
+        
+        button.setTitle("Start", for: .normal)
+        for treeImageView in threeThumbs {
+            treeImageView.alpha = 0.4
+        }
+    }
+    
+    func stopTrees() {
+        timer?.invalidate()
+        button.setTitle("Start", for: .normal)
+    }
+    
+    @objc func timerHandle() {
+        timePassed += 1
+        if timePassed % roundsNeeded == 0 {
+            updateTrees()
         }
     }
 }

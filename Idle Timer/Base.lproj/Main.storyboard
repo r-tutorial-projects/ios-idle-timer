@@ -37,11 +37,58 @@
                                     <action selector="buttonOnClickHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qfu-1G-adG"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ITK-Sf-xqm">
+                                <rect key="frame" x="20" y="44.000000000000007" width="374" height="66.666666666666686"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tree5" translatesAutoresizingMaskIntoConstraints="NO" id="Cyu-qQ-OyN">
+                                        <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="66.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Cyu-qQ-OyN" secondAttribute="height" multiplier="1:1" id="xeG-eJ-G8P"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tree5" translatesAutoresizingMaskIntoConstraints="NO" id="sjj-bb-qZn">
+                                        <rect key="frame" x="76.666666666666671" y="0.0" width="67.000000000000014" height="66.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="sjj-bb-qZn" secondAttribute="height" multiplier="1:1" id="RgO-A2-gKK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tree5" translatesAutoresizingMaskIntoConstraints="NO" id="bim-t2-EQs">
+                                        <rect key="frame" x="153.66666666666666" y="0.0" width="66.666666666666657" height="66.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bim-t2-EQs" secondAttribute="height" multiplier="1:1" id="rIx-Kt-LE7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tree5" translatesAutoresizingMaskIntoConstraints="NO" id="zT5-yX-AiY">
+                                        <rect key="frame" x="230.33333333333337" y="0.0" width="67" height="66.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zT5-yX-AiY" secondAttribute="height" multiplier="1:1" id="lQs-01-CKM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tree5" translatesAutoresizingMaskIntoConstraints="NO" id="tyo-Iq-NV8">
+                                        <rect key="frame" x="307.33333333333331" y="0.0" width="66.666666666666686" height="66.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="tyo-Iq-NV8" secondAttribute="height" multiplier="1:1" id="feB-zn-2e9"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Cyu-qQ-OyN" firstAttribute="width" secondItem="Cyu-qQ-OyN" secondAttribute="height" multiplier="1:1" id="BNm-hb-7cw"/>
+                                    <constraint firstItem="Cyu-qQ-OyN" firstAttribute="width" secondItem="Cyu-qQ-OyN" secondAttribute="height" multiplier="1:1" id="FSi-Wr-x40"/>
+                                    <constraint firstItem="sjj-bb-qZn" firstAttribute="width" secondItem="sjj-bb-qZn" secondAttribute="height" multiplier="1:1" id="SoR-mT-QEI"/>
+                                    <constraint firstItem="Cyu-qQ-OyN" firstAttribute="width" secondItem="Cyu-qQ-OyN" secondAttribute="height" multiplier="1:1" id="WXh-0i-kIk"/>
+                                    <constraint firstItem="tyo-Iq-NV8" firstAttribute="width" secondItem="tyo-Iq-NV8" secondAttribute="height" multiplier="1:1" id="apv-2X-XR8"/>
+                                    <constraint firstItem="sjj-bb-qZn" firstAttribute="width" secondItem="sjj-bb-qZn" secondAttribute="height" multiplier="1:1" id="nMA-jR-XP9"/>
+                                    <constraint firstItem="bim-t2-EQs" firstAttribute="width" secondItem="bim-t2-EQs" secondAttribute="height" multiplier="1:1" id="qcu-mb-0Yj"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="PrimaryGreen"/>
                         <constraints>
                             <constraint firstItem="myY-HC-XdC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1HT-iQ-JZ6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ITK-Sf-xqm" secondAttribute="trailing" constant="20" id="3Qc-NM-ca2"/>
+                            <constraint firstItem="ITK-Sf-xqm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GSi-iZ-iZ4"/>
                             <constraint firstItem="myY-HC-XdC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SUR-qe-U8w"/>
+                            <constraint firstItem="ITK-Sf-xqm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="T95-VB-OxW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="frr-v8-Xic" secondAttribute="trailing" id="i1o-41-L4G"/>
                             <constraint firstItem="frr-v8-Xic" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mjs-Tt-ke0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="frr-v8-Xic" secondAttribute="bottom" id="wNn-QG-bLX"/>
@@ -52,6 +99,11 @@
                         <outlet property="button" destination="frr-v8-Xic" id="yhl-DN-rtX"/>
                         <outlet property="treeImageView" destination="myY-HC-XdC" id="oUB-Vz-Qz6"/>
                         <outlet property="treeImageWidthContraint" destination="npB-Vh-dCd" id="On8-N6-4ZT"/>
+                        <outletCollection property="threeThumbs" destination="Cyu-qQ-OyN" collectionClass="NSMutableArray" id="A2a-2G-if6"/>
+                        <outletCollection property="threeThumbs" destination="sjj-bb-qZn" collectionClass="NSMutableArray" id="gMk-1b-0wB"/>
+                        <outletCollection property="threeThumbs" destination="bim-t2-EQs" collectionClass="NSMutableArray" id="Ae5-nl-7x8"/>
+                        <outletCollection property="threeThumbs" destination="zT5-yX-AiY" collectionClass="NSMutableArray" id="1Jf-Mx-gJ8"/>
+                        <outletCollection property="threeThumbs" destination="tyo-Iq-NV8" collectionClass="NSMutableArray" id="FjA-tJ-3Oj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -61,8 +113,9 @@
     </scenes>
     <resources>
         <image name="Tree1" width="500" height="961.5"/>
+        <image name="Tree5" width="500" height="836.5"/>
         <namedColor name="PrimaryGreen">
-            <color red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.56000000238418579" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
