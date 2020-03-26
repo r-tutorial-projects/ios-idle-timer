@@ -45,8 +45,12 @@ class ViewController: UIViewController {
     func updateTrees() {
         currentTree += 1
         if let image = UIImage(named: "Tree\(currentTree)") {
-            treeImageView.image = image
             treeImageWidthContraint.constant += treeImageWidthContraint.constant * 0.4
+            UIView.transition(with: treeImageView, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                self.treeImageView.image = image
+            }, completion: nil)
+            
+            treeImageView.image = image
         } else {
             if grownTrees == threeThumbs.count - 1 {
                 stopTrees()
